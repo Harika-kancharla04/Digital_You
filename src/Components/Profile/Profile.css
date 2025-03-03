@@ -1,0 +1,373 @@
+/* Profile.css */
+.profile-container {
+    width: 100%;  /* Full viewport width */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    padding: 20px;
+}
+
+.profile-card {
+    width: 80%; /* Adjust width as needed */
+    max-width: 900px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.skills-section {
+    width: 80%;
+    max-width: 900px;
+    background: var(--card-bg);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure Buttons are Centered */
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Adjust profile picture */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+}
+
+
+.edit-btn, .settings-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-btn:hover, .settings-btn:hover {
+    background: var(--primary-dark);
+}
+
+:root {
+    --background-color: #f4f4f4;
+    --card-bg: white;
+    --primary-color: #4a90e2;
+    --primary-dark: #357abd;
+    --primary-light: #e3efff;
+    --text-color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --background-color: #1e1e1e;
+    --card-bg: #2c2c2c;
+    --primary-color: #ff9800;
+    --primary-dark: #e68900;
+    --primary-light: #ffe3b3;
+    --text-color: #ddd;
+}
+
+.upload-label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.upload-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+/* Profile.css */
+:root {
+    --primary-color: #4a90e2;
+    --primary-dark: #357ABD;
+    --bg-color: #f9f9f9;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --card-bg: #ffffff;
+    --border-radius: 12px;
+    --transition: all 0.3s ease-in-out;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cover Image */
+.cover-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+/* Profile Section */
+.profile-card {
+    position: relative;
+    margin-top: -60px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Upload Button */
+.upload-btn {
+    margin-top: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.upload-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Profile Details */
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.profile-bio {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin: 8px 0;
+}
+
+.profile-email {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--primary-dark);
+}
+
+/* Skills & Achievements */
+.skills-section, .projects-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Skills & Certifications */
+.skills-list, .cert-list, .projects-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.skill-item, .cert-item {
+    background: var(--bg-color);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.skill-item:hover, .cert-item:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Profile Completion Progress */
+.progress-container {
+    width: 100%;
+    background: var(--bg-color);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    height: 8px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    width: 80%; /* Dynamically change this based on completion */
+    transition: var(--transition);
+}
+
+/* Project Cards */
+.project-item {
+    background: var(--bg-color);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.project-item:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.project-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.project-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Buttons */
+.profile-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.edit-btn, .settings-btn, .add-project-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.edit-btn:hover, .settings-btn:hover, .add-project-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+}
