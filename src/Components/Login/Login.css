@@ -1,71 +1,150 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
+/* Login Styles */
 .maindiv {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    height: 100vh;
-    width: 100vw;
-    background: #f4f4f4;
+    /* min-height: 100vh; */
+    background: linear-gradient(to right, #000000, #4a4a4a);
+    padding: 20px;
 }
 
+.logo {
+    margin-bottom: 30px;
+}
 
 .logo img {
-    width: 16rem;
-    margin-bottom: 20px;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
 }
-
 
 .loginform {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-    width: 100vw; 
-    max-width: 600px; 
-}
-
-
-label {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 5px;
-    text-align: left;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
     width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
+.loginform h2 {
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 
-input {
+.loginform input {
+    width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    width: 100%;
-    margin-bottom: 15px;
 }
 
+.loginform input:focus {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
 
-button {
+.loginform button {
+    width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 18px;
-    width: 100%;
-    transition: 0.3s;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+.loginform button:hover {
+    background-color: #333;
 }
 
+.guest-btn {
+    background-color: #4a4a4a !important;
+}
+
+.guest-btn:hover {
+    background-color: #666 !important;
+}
+
+.loginform p {
+    color: #666;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.loginform p:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+    .loginform {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .loginform h2 {
+        font-size: 20px;
+    }
+
+    .loginform input,
+    .loginform button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Accessibility and Focus States */
+.loginform input:focus,
+.loginform button:focus {
+    outline: 2px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+/* Dark Mode Compatibility */
+@media (prefers-color-scheme: dark) {
+    .maindiv {
+        background: linear-gradient(to right, #1a1a1a, #333);
+    }
+
+    .loginform {
+        background-color: #2a2a2a;
+        color: white;
+    }
+
+    .loginform input {
+        background-color: #3a3a3a;
+        color: white;
+        border-color: #555;
+    }
+
+    .loginform button {
+        background-color: #ffcc00;
+        color: black;
+    }
+
+    .loginform button:hover {
+        background-color: #ffd633;
+    }
+}

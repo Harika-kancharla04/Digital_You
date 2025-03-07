@@ -4,9 +4,10 @@ import logo from "./assets/Digital You logo.jpeg.jpg";
 import logo1 from "./assets/Digital You BG.png";
 import vdo from "./assets/WC vdo.mp4";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 
 const dynamicContent = {
+
     brandName: "Digital You",
     tagline: "Your gateway to a powerful digital presence.",
     description: "At Digital You, we believe in crafting a strong digital identity that reflects your business values and aspirations. Whether you're a startup, a growing business, or an established enterprise, we offer tailored solutions to enhance your online presence.From stunning website designs to advanced SEO strategies and social media management, we bring creativity and technical expertise to the forefront. Let us help you navigate the digital world with confidence and success.",
@@ -83,6 +84,13 @@ const ServiceCard = ({ title, description }) => (
 
 const LandingPage = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate=useNavigate();
+
+    const navigateToLogin=()=>{
+        navigate("/login")
+    }
+
+    
 
     return (
         <div className="container">
@@ -107,12 +115,19 @@ const LandingPage = () => {
                         <h1>{dynamicContent.brandName}</h1>
                         <p>{dynamicContent.tagline}</p>
                         <p>{dynamicContent.description}</p>
+                        <button 
+                            className="hero-cta-btn" 
+                            onClick={navigateToLogin}
+                        >
+                            Get Started
+                        </button>
                     </div>
                     <div className="hero-image">
                         <img src={logo} alt={`${dynamicContent.brandName} Logo`} />
                     </div>
                 </div>
             </section>
+            {/* Rest of the component remains the same as in the original code */}
             <section id="about" className="aboutsection">
                 <video autoPlay loop muted playsInline>
                     <source src={vdo} type="video/mp4" />
