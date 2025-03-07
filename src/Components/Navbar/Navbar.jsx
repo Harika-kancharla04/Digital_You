@@ -9,19 +9,19 @@ const Navbar = () => {
             <div className="logo">
                 <h2>Digital You</h2>
             </div>
-            <nav className="nav-links">
-                <NavLink to="/" className="nav-item" activeClassName="active">
+            <nav className="sidebar-links">
+                <NavLink to="/dashboard" className="sidebar-item" activeClassName="active">
                     <FaHome className="icon" /> Dashboard
                 </NavLink>
-                <NavLink to="/profile" className="nav-item" activeClassName="active">
+                <NavLink to="/profile" className="sidebar-item" activeClassName="active">
                     <FaUser className="icon" /> Profile
                 </NavLink>
-                <NavLink to="/settings" className="nav-item" activeClassName="active">
+                <NavLink to="/settings" className="sidebar-item" activeClassName="active">
                     <FaCog className="icon" /> Settings
                 </NavLink>
             </nav>
             <div className="logout">
-                <NavLink to="/" className="nav-item">
+                <NavLink to="/" className="sidebar-item">
                     <FaSignOutAlt className="icon" /> Logout
                 </NavLink>
             </div>
