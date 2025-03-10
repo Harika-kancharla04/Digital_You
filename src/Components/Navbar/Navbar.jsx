@@ -10,11 +10,14 @@ const Navbar = () => {
                 <h2>Digital You</h2>
             </div>
             <nav className="sidebar-links">
-                <NavLink to="/dashboard" className="sidebar-item" activeClassName="active">
-                    <FaHome className="icon" /> Dashboard
+                <NavLink to="/home" className="sidebar-item" activeClassName="active">
+                    <FaHome className="icon" /> Home
                 </NavLink>
                 <NavLink to="/profile" className="sidebar-item" activeClassName="active">
                     <FaUser className="icon" /> Profile
+                </NavLink>
+                <NavLink to="/resume" className="sidebar-item" activeClassName="active">
+                    <FaUser className="icon" /> Resume
                 </NavLink>
                 <NavLink to="/settings" className="sidebar-item" activeClassName="active">
                     <FaCog className="icon" /> Settings

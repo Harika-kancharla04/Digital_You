@@ -1,5 +1,3 @@
-// File: src/components/Profile/ProfileTabs.js
-
 import React from 'react';
 import { Briefcase, Award, Book, Code } from 'lucide-react';
 

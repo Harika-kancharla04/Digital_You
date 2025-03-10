@@ -56,14 +56,14 @@ const Login = () => {
             }
 
             alert("Login successful!");
-            navigate("/dashboard");
+            navigate("/home");
         }
     };
 
     //Guest Login
     const handleGuestLogin = () => {
         alert("Guest Login Successful!");
-        navigate("/dashboard"); 
+        navigate("/home"); 
     };
 
     return (

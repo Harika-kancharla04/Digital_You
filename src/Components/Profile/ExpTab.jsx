@@ -12,7 +12,8 @@ const ExperienceTab = ({ profile = { experiences: [] }, setProfile, isEditing })
         {
           company: 'New Company',
           position: 'Position Title',
-          duration: 'Start - End Date',
+          startDate: 'Start date',
+          endDate:  'End date',
           description: 'Job description'
         }
       ]
@@ -67,12 +68,21 @@ const ExperienceTab = ({ profile = { experiences: [] }, setProfile, isEditing })
                 className="edit-input company-input"
                 placeholder="Company Name"
               />
+              <label>Start Date:</label>
               <input
-                type="text"
-                value={exp.duration}
-                onChange={(e) => handleExperienceChange(index, 'duration', e.target.value)}
+                type="date"
+                value={exp.startDate}
+                onChange={(e) => handleExperienceChange(index, 'start date', e.target.value)}
                 className="edit-input duration-input"
-                placeholder="Duration (e.g., Jan 2020 - Present)"
+                placeholder="Start date"
+              />
+              <label>End Date:</label>
+              <input
+                type="date"
+                value={exp.endDate}
+                onChange={(e) => handleExperienceChange(index, 'end date', e.target.value)}
+                className="edit-input duration-input"
+                placeholder="end data"
               />
               <textarea
                 value={exp.description}
